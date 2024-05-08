@@ -25,7 +25,7 @@ def wsgi_errors_stream() -> t.TextIO:
     if request:
         return request.environ["wsgi.errors"]  # type: ignore[no-any-return]
 
-    return sys.stderr
+    return None
 
 
 def has_level_handler(logger: logging.Logger) -> bool:
